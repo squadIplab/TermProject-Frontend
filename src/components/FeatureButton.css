@@ -1,0 +1,9 @@
+.feature-btn {
+	margin: 1rem;
+}
+.feature-button-root {
+	border: 2px solid black;
+	display: inline-block;
+	padding: 2rem;
+	margin: 2rem;
+}
