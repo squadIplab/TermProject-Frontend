@@ -19,7 +19,10 @@ const ImageCard = ({
 		const blob = await fetch(imageLink).then((r) => r.blob());
 		blob.name = imageLink.substring(imageLink.lastIndexOf('/') + 1);
 		setInputImage(blob);
-		setInputLink(URL.createObjectURL(blob));
+		setInputLink((prev) => {
+			if (prev) URL.revokeObjectURL(prev);
+			return URL.createObjectURL(blob);
+		});
 	};
 	return (
 		<div className="image-card-root">

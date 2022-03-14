@@ -16,7 +16,10 @@ function App() {
 	}, []);
 	const handleImageUpload = (e) => {
 		setInputImage(e.target.files[0]);
-		setInputLink(URL.createObjectURL(e.target.files[0]));
+		setInputLink((prev) => {
+			if (prev) URL.revokeObjectURL(prev);
+			return URL.createObjectURL(e.target.files[0]);
+		});
 	};
 	const updateOutputView = async () => {
 		const paths = await getAllImages();
