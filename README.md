@@ -4,3 +4,8 @@ Create .env in root with the following content for your sanity, because without 
 ```
 FAST_REFRESH=false
 ```
+## To Run
+```
+npm install
+npm run start
+```
