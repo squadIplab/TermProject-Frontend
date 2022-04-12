@@ -24,6 +24,11 @@ const features = [
 		api: 'binarize',
 		options: ['threshold'],
 	},
+  {
+    name: "Text-To-Document-Ratio",
+    api: "text_ratio",
+    options: [],
+  },
 ];
 
 export default features;

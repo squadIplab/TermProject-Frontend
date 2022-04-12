@@ -39,7 +39,12 @@ function App() {
 				inputImage.name.substring(0, inputImage.name.lastIndexOf('.'))
 			);
 			Object.entries(options).map(([key, value]) => form.set(key, value));
-			await postImage(api, form);
+			if (api === "text_ratio") {
+        const res = await postImage(api, form);
+        window.alert("Text is to Document Ratio is:- " + res.text_ratio);
+      } else {
+        await postImage(api, form);
+      }
 			//image urls can be cached by browser. So keep checking in static folder also, if no change happens
 			//This wont be an issue if different input images have different names
 			//And output images have different names
