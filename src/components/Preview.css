@@ -1,23 +1,23 @@
 .preview-img {
-	height: 600px;
-	width: 500px;
-	border: 2px solid black;
-	margin: 2rem;
+  height: 400px;
+  width: 300px;
+  border: 2px solid black;
+  margin: 2rem;
 }
 .blank-div {
-	height: 600px;
-	width: 500px;
-	border: 2px solid black;
-	margin: 2rem;
-	display: inline-block;
+  height: 400px;
+  width: 300px;
+  border: 2px solid black;
+  margin: 2rem;
+  display: inline-block;
 }
 
 .preview-root {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
 }
 
 .preview-title {
-	margin: 0;
+  margin: 0;
 }

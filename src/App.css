@@ -1,7 +1,56 @@
-.preview {
-	align-items: center;
-	text-align: center;
+.Head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5465ff;
+  color: white;
+  margin: 0;
+  height: 80px;
 }
+
+.Head h1 {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview {
+  margin: 30px;
+  align-items: center;
+  text-align: center;
+}
+
 .loading {
-	display: inline-block;
+  display: inline-block;
+}
+
+.features {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: #9bb1ff;
+}
+
+.processed-tray {
+  max-height: 100%;
+  width: 20%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #e2fdff;
 }

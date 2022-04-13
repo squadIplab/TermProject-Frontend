@@ -1,10 +1,24 @@
 .image-card-img {
-	height: 200px;
-	width: 200px;
-	border: 2px solid black;
-	display: block;
+  height: 200px;
+  width: 100%;
+  border: 2px solid black;
+  display: block;
 }
+
 .image-card-root {
-	display: inline-block;
-	margin: 1rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.image-card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.image-card-buttons button {
+  height: 100%;
+  width: 33%;
 }

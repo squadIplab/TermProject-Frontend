@@ -1,9 +1,31 @@
 .feature-btn {
-	margin: 1rem;
+  /* margin: 1rem; */
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  width: 100%;
 }
 .feature-button-root {
-	border: 2px solid black;
-	display: inline-block;
-	padding: 2rem;
-	margin: 2rem;
+  margin: 1rem 0;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  max-width: 200px;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 80%;
+}
+
+.feature-button-inputs {
+  display: flex;
+  margin-bottom: 0.4rem;
+  width: 100%;
+  justify-content: center;
+}
+.feature-button-inputs > input {
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid black;
 }
