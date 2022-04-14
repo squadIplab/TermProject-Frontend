@@ -8,6 +8,7 @@
 .image-card-root {
   display: inline-block;
   margin: 1rem;
+  width: 80%;
 }
 
 .image-card-buttons {

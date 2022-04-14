@@ -66,7 +66,7 @@ function App() {
             <Preview imageLink={outputLink} type="Output" />
           </div>
           <div className="upload">
-            <button class="btn">Upload a file</button>
+            <button class="btn">Upload a Pic</button>
             <input
               type="file"
               className="upload-btn"
