@@ -39,7 +39,9 @@ function App() {
       Object.entries(options).map(([key, value]) => form.set(key, value));
       if (api === "text_ratio") {
         const res = await postImage(api, form);
-        window.alert("Text is to Document Ratio is:- " + res.text_ratio);
+        window.alert(
+          "Text is to Document Ratio is " + res.text_ratio * 100 + "%"
+        );
       } else {
         await postImage(api, form);
       }
