@@ -29,7 +29,9 @@ const ImageCard = ({
       <img className="image-card-img" src={imageLink} alt="broken" />
       <div className="image-card-buttons">
         <button onClick={handleInput}>Use As Input</button>
-        <button onClick={handleShow}>Show In Output</button>
+        <button id="middle-btn" onClick={handleShow}>
+          Show In Output
+        </button>
         <button onClick={handleDownload}>Download</button>
       </div>
     </div>

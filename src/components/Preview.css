@@ -1,15 +1,23 @@
 .preview-img {
   height: 400px;
   width: 300px;
-  border: 2px solid black;
+  border: 2px solid #1264a3;
   margin: 2rem;
 }
 .blank-div {
   height: 400px;
   width: 300px;
-  border: 2px solid black;
+  border: 2px solid #1264a3;
+  color: #1264a3;
   margin: 2rem;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.preview-title {
+  color: #4a154b;
 }
 
 .preview-root {

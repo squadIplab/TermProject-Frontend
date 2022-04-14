@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #5465ff;
+  background: #009788;
   color: white;
   margin: 0;
   height: 80px;
@@ -35,13 +35,38 @@
   display: inline-block;
 }
 
+.upload {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload button {
+  border: 2px solid #4a154b;
+  color: #4a154b;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.upload input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
 .features {
   display: flex;
   align-items: flex-end;
   width: 100%;
   justify-content: space-between;
   padding: 10px 50px;
-  background-color: #9bb1ff;
+  background-color: #1264a3;
 }
 
 .processed-tray {
@@ -52,5 +77,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: #e2fdff;
+  background: #f4ede4;
+}
+
+.processed-tray h3 {
+  color: #4a154b;
 }

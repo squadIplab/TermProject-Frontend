@@ -1,7 +1,7 @@
 .image-card-img {
   height: 200px;
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid #4a154b;
   display: block;
 }
 
@@ -16,9 +16,23 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  border: 2px solid #4a154b;
+  border-top: none;
+}
+
+#middle-btn {
+  border-left: 2px solid #4a154b;
+  border-right: 2px solid #4a154b;
 }
 
 .image-card-buttons button {
   height: 100%;
-  width: 33%;
+  width: 33.33%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: #4a154b;
+  font-weight: 600;
+  font-size: 12px;
+  background: rgba(white, 0);
 }
