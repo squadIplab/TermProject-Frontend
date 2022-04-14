@@ -27,6 +27,9 @@ function App() {
     setProcessedImageLinks(links);
     setOutputLink(links[links.length - 1]);
   };
+  const reverseTray = (array) => {
+     return array.slice().reverse();
+  }
   const handleSubmit = async (api, options) => {
     try {
       setLoading(true);
@@ -39,8 +42,9 @@ function App() {
       Object.entries(options).map(([key, value]) => form.set(key, value));
       if (api === "text_ratio") {
         const res = await postImage(api, form);
+        const percentage = Math.round(((res.text_ratio*100) + Number.EPSILON) * 100) / 100
         window.alert(
-          "Text is to Document Ratio is " + res.text_ratio * 100 + "%"
+          "Text Percentage : " + percentage + "%"
         );
       } else {
         await postImage(api, form);
@@ -89,7 +93,7 @@ function App() {
         </div>
         <div className="processed-tray">
           <h3>Processed Tray</h3>
-          {processedImageLinks.map((link, i) => {
+          {reverseTray(processedImageLinks).map((link, i) => {
             return (
               <ImageCard
                 key={i}
