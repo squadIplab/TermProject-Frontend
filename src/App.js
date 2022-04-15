@@ -5,6 +5,8 @@ import FeatureButton from "./components/FeatureButton";
 import Preview from "./components/Preview";
 import ImageCard from "./components/ImageCard";
 import { postImage, getAllImages } from "./API/utils";
+import Loader from "./loader.gif";
+
 function App() {
   const [loading, setLoading] = useState(false);
   const [inputImage, setInputImage] = useState();
@@ -28,8 +30,8 @@ function App() {
     setOutputLink(links[links.length - 1]);
   };
   const reverseTray = (array) => {
-     return array.slice().reverse();
-  }
+    return array.slice().reverse();
+  };
   const handleSubmit = async (api, options) => {
     try {
       setLoading(true);
@@ -42,10 +44,9 @@ function App() {
       Object.entries(options).map(([key, value]) => form.set(key, value));
       if (api === "text_ratio") {
         const res = await postImage(api, form);
-        const percentage = Math.round(((res.text_ratio*100) + Number.EPSILON) * 100) / 100
-        window.alert(
-          "Text Percentage : " + percentage + "%"
-        );
+        const percentage =
+          Math.round((res.text_ratio * 100 + Number.EPSILON) * 100) / 100;
+        window.alert("Text Percentage : " + percentage + "%");
       } else {
         await postImage(api, form);
       }
@@ -68,7 +69,9 @@ function App() {
         <div className="container">
           <div className="preview">
             <Preview imageLink={inputLink} type="Input" />
-            {loading && <h1 className="loading">Loading...</h1>}
+            <div className="Loader">
+              {loading && <img src={Loader} alt="Loading..." />}
+            </div>
             <Preview imageLink={outputLink} type="Output" />
           </div>
           <div className="upload">

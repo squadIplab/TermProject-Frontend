@@ -27,12 +27,14 @@
 
 .preview {
   margin: 30px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+  justify-content: space-around;
 }
 
-.loading {
-  display: inline-block;
+.Loader {
+  width: 60px;
 }
 
 .upload {
